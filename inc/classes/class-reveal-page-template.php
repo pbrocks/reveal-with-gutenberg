@@ -9,18 +9,18 @@ class Reveal_Page_Template {
 	public function __construct() {
 		add_filter( 'theme_page_templates', array( $this, 'add_page_template_to_dropdown' ) );
 		add_filter( 'template_include', array( $this, 'change_page_template' ), 99 );
-		add_action( 'admin_head', array( $this, 'print_in_head' ), 99 );
+		// add_action( 'admin_head', array( $this, 'print_in_head' ), 99 );
 		// add_action( 'wp_head', array( $this, 'print_in_head' ), 99 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 
 	public function enqueue_scripts() {
-		wp_register_script( 'reveal-jbase', plugin_dir_url( __FILE__ ) . '/reveal-js/js/reveal.js', array( 'jquery' ), 'version', true );
-		wp_enqueue_script( 'reveal-min', plugins_url( '../reveal-js/lib/js/head.min.js', __FILE__ ), array( 'jquery' ), 'version', true );
-		wp_register_style( 'reveal-base', plugin_dir_url( __FILE__ ) . '../reveal-js/css/reveal.css' );
-		wp_register_style( 'reveal-black', plugins_url( '../reveal-js/css/theme/black.css', __FILE__ ) );
-		wp_enqueue_style( 'reveal-base' );
-		wp_enqueue_script( 'reveal-jbase' );
+		// wp_register_script( 'reveal-jbase', plugin_dir_url( __FILE__ ) . '/reveal-js/js/reveal.js', array( 'jquery' ), 'version', true );
+		// wp_register_script( 'reveal-min', plugins_url( '../reveal-js/lib/js/head.min.js', __FILE__ ), array( 'jquery' ), 'version', true );
+		// wp_register_style( 'reveal-base', plugin_dir_url( __FILE__ ) . '../reveal-js/css/reveal.css' );
+		wp_register_style( 'reveal-black', REVAL_JS . 'reveal-js/css/theme/black.css' );
+		// wp_enqueue_style( 'reveal-base' );
+		// wp_enqueue_script( 'reveal-jbase' );
 		wp_enqueue_style( 'reveal-black' );
 	}
 
@@ -65,7 +65,7 @@ class Reveal_Page_Template {
 	 * @return mixed
 	 */
 	public function change_page_template( $template ) {
-		if ( is_page() ) {
+		if ( is_page( 'reveal-page' ) ) {
 			$meta = get_post_meta( get_the_ID() );
 
 			if ( ! empty( $meta['_wp_page_template'][0] ) && $meta['_wp_page_template'][0] != $template ) {

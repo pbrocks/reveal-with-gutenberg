@@ -2,12 +2,17 @@
 /**
  * Reveal Page template
  */
-// get_header();
+// get_header( 'reveal' );
+// if ( ! defined( ABSPATH ) ) {
+// $page_path = explode( '/wp-content/', dirname( __FILE__ ) );
+// include_once( str_replace( 'wp-content/' , '', $page_path[0] . '/wp-load.php' ) );
+// }
 ?>
-<!doctype html>
+<?php wp_head(); ?>
+<!-- <!doctype html>
 <html lang="en">
 
-  <head>
+  <head> -->
 	<meta charset="utf-8">
 
 	<title>reveal.js – The HTML Presentation Framework</title>
@@ -21,7 +26,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 	<link rel="stylesheet" href="<?php echo REVAL_JS; ?>/reveal-js/css/reveal.css">
-	<link rel="stylesheet" href="<?php echo REVAL_JS; ?>/reveal-js/css/theme/black.css" id="theme">
+	<link rel="stylesheet" href="<?php echo REVAL_JS; ?>/reveal-js/css/theme/solarized.css" id="theme">
 
 	<!-- Code syntax highlighting -->
 	<link rel="stylesheet" href="<?php echo REVAL_JS; ?>/reveal-js/lib/css/zenburn.css">
@@ -49,7 +54,7 @@
 		<section data-markdown>
 # GPL
 ### The Good Parts of WordPress
-by [@anttiviljami](http://twitter.com/anttiviljami)
+by [@anttiviljami](//twitter.com/anttiviljami)
 		</section>
 
 		<section>
@@ -62,27 +67,27 @@ GNU General Public License
 		  </section>
 		  <section data-markdown>
 ## It's Open Source !
-[![Make WordPress Core](http://anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/screenshot0.png)](https://core.trac.wordpress.org/browser/)
+[![Make WordPress Core](//anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/screenshot0.png)](https://core.trac.wordpress.org/browser/)
 		  </section>
 		  <section data-markdown>
-[![license.txt](http://anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/screenshot1.png)](https://github.com/WordPress/WordPress)
+[![license.txt](//anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/screenshot1.png)](https://github.com/WordPress/WordPress)
 		  </section>
 		  <section data-markdown>
-[![license.txt](http://anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/screenshot2.png)](https://github.com/WordPress/WordPress)
+[![license.txt](//anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/screenshot2.png)](https://github.com/WordPress/WordPress)
 		  </section>
 		</section>
 
 		<section>
 		  <section data-markdown>
 ## TL;DR;
-[![gpl license](http://anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/screenshot3.png)](http://www.gnu.org/licenses/old-licenses/gpl-2.0.txt)
+[![gpl license](//anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/screenshot3.png)](//www.gnu.org/licenses/old-licenses/gpl-2.0.txt)
 		  </section>
 		  <section data-markdown>
 ## What else does it say?
 		  </section>
 		</section>
 
-		<section data-markdown data-background="http://anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/rms.jpg">
+		<section data-markdown data-background="//anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/rms.jpg">
 ## Let's ask this guy
 Image Source: [https://stallman.org](stallman.org)
 		</section>
@@ -113,7 +118,7 @@ Image Source: [https://stallman.org](stallman.org)
 		  </section>
 		</section>
 
-		<section data-markdown data-background="http://i.giphy.com/OjBocHTklyQda.gif">
+		<section data-markdown data-background="//i.giphy.com/OjBocHTklyQda.gif">
 ## OK, cool
 		</section>
 
@@ -127,20 +132,20 @@ why should I care?
 		  <section data-markdown>
 Did you know that all your WordPress code is GPL too?
 		  </section>
-		  <section data-markdown data-background="http://i.giphy.com/l41lUZGnCzLErXevK.gif">
+		  <section data-markdown data-background="//i.giphy.com/l41lUZGnCzLErXevK.gif">
 ### Yeah, it is.
 		  </section>
 		  <section data-markdown>
 That's a good thing! Right?
 		  </section>
-		  <section data-markdown data-background="http://anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/ballmer.jpg">
+		  <section data-markdown data-background="//anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/ballmer.jpg">
 > “(GPL) is a cancer that attaches itself in an intellectual property sense to everything it touches.”
 
 *- Steve Ballmer*
 		  </section>
 		</section>
 
-		<section data-markdown data-background="http://i.giphy.com/UxJjs7Kah20OA.gif">
+		<section data-markdown data-background="//i.giphy.com/UxJjs7Kah20OA.gif">
 Open Source is awesome!
 		</section>
 
@@ -183,13 +188,13 @@ These guys seem to be doing pretty well
 			<table>
 			  <tr>
 				<td style="vertical-align:middle" width="33%">
-			<img style="border:none;backround:transparent;box-shadow:none" alt="Envato" src="http://anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/envato.png">
+			<img style="border:none;backround:transparent;box-shadow:none" alt="Envato" src="//anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/envato.png">
 				</td>
 				<td style="vertical-align:middle" width="33%">
-			<img style="border:none;backround:transparent;box-shadow:none" alt="WooThemes" src="http://anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/woothemes.png">
+			<img style="border:none;backround:transparent;box-shadow:none" alt="WooThemes" src="//anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/woothemes.png">
 				</td>
 				<td style="vertical-align:middle" width="33%">
-			<img style="border:none;backround:transparent;box-shadow:none" alt="Yoast" src="http://anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/yoast.png">
+			<img style="border:none;backround:transparent;box-shadow:none" alt="Yoast" src="//anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/yoast.png">
 				</td>
 			  </tr>
 			</table>
@@ -211,7 +216,7 @@ The Premium Plugin / Theme model:
 		  <section>
 			<p>GPL means Free as in <span class="fragment highlight-blue">Freedom</span></p>
 		  </section>
-		  <section data-background="http://i.giphy.com/zrj0yPfw3kGTS.gif">
+		  <section data-background="//i.giphy.com/zrj0yPfw3kGTS.gif">
 			<p>Not as in <span class="fragment highlight-red">Free Beer</span></p>
 		  </section>
 		</section>
@@ -224,7 +229,7 @@ Premium Plugins and Themes aren't GPL
 		  <section data-markdown>
 Yes, They are.
 		  </section>
-		  <section data-markdown data-background="http://anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/matt.jpg">
+		  <section data-markdown data-background="//anttiviljami.github.io/gpl-good-parts-of-wordpress/assets/matt.jpg">
 > "PHP in WordPress themes must be GPL, artwork and CSS may be but are not required."
 
 *- Matt Mullenweg*
@@ -287,7 +292,7 @@ Would you do it for free?
 		  </section>
 
 		  <!--
-		  <section data-background="http://i.giphy.com/l41lIkTqv4NTHPktO.gif">
+		  <section data-background="//i.giphy.com/l41lIkTqv4NTHPktO.gif">
 			<h3>Open Source is <span class="fragment highlight-green">big business</span></h3>
 		  </section>
 		  -->
@@ -298,7 +303,7 @@ Would you do it for free?
 		  <p><span class="fragment highlight-blue">Open Source</span> and <span class="fragment highlight-blue">GPL</span> are what make WordPress so great!</p>
 		</section>
 
-		<section data-background="http://i.giphy.com/6nuiJjOOQBBn2.gif">
+		<section data-background="//i.giphy.com/6nuiJjOOQBBn2.gif">
 		  <h3>Support and celebrate it!</h3>
 		</section>
 

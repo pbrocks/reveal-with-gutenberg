@@ -11,3 +11,4 @@ defined( 'ABSPATH' ) || die( 'File cannot be accessed directly' );
 define( 'REVAL_JS', plugin_dir_url( __FILE__ ) );
 
 require 'inc/classes/class-reveal-page-template.php';
+require 'inc/classes/class-reveal-customizer-section.php';
